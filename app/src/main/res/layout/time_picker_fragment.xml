@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.stylingandroid.material.timepicker.TimePickerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".TimePickerFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textview_selected_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?textAppearanceHeadline5"
+            app:layout_constraintBottom_toTopOf="@+id/textview_mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:timeSelected="@{viewModel.selectedTime}" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textview_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:textAppearance="?textAppearanceHeadline5"
+            app:layout_constraintBottom_toTopOf="@+id/show_timepicker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_selected_time"
+            app:inputMode="@{viewModel.inputMode}"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/show_timepicker"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/show_timepicker"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">MaterialTimePicker</string>
+    <string name="show_timepicker">Show TimePicker</string>
+
+    <string name="time_not_selected">Selected Time: None</string>
+    <string name="time_selected">Selected Time: %1$02d:%2$02d</string>
+    <string name="input_mode_clock">Input Mode: Clock</string>
+    <string name="input_mode_keyboard">Input Mode: Keyboard</string>
 </resources>
